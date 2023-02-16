@@ -36,6 +36,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.AceptarButton = new System.Windows.Forms.Button();
             this.CancelarButton = new System.Windows.Forms.Button();
+            this.MostrarContraseñaButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -118,6 +119,15 @@
             this.CancelarButton.UseVisualStyleBackColor = true;
             this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
+            // MostrarContraseñaButton
+            // 
+            this.MostrarContraseñaButton.Image = global::Vista.Properties.Resources.Mostrar_Contraseña;
+            this.MostrarContraseñaButton.Location = new System.Drawing.Point(337, 209);
+            this.MostrarContraseñaButton.Name = "MostrarContraseñaButton";
+            this.MostrarContraseñaButton.Size = new System.Drawing.Size(35, 22);
+            this.MostrarContraseñaButton.TabIndex = 7;
+            this.MostrarContraseñaButton.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -138,6 +148,7 @@
             this.CancelButton = this.CancelarButton;
             this.ClientSize = new System.Drawing.Size(408, 329);
             this.ControlBox = false;
+            this.Controls.Add(this.MostrarContraseñaButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.AceptarButton);
@@ -168,6 +179,7 @@
         private System.Windows.Forms.Button CancelarButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button MostrarContraseñaButton;
     }
 }
 
