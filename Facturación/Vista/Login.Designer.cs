@@ -127,6 +127,7 @@
             this.MostrarContraseñaButton.Size = new System.Drawing.Size(35, 22);
             this.MostrarContraseñaButton.TabIndex = 7;
             this.MostrarContraseñaButton.UseVisualStyleBackColor = true;
+            this.MostrarContraseñaButton.Click += new System.EventHandler(this.MostrarContraseñaButton_Click);
             // 
             // pictureBox1
             // 
@@ -144,7 +145,7 @@
             this.AcceptButton = this.AceptarButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.CancelButton = this.CancelarButton;
             this.ClientSize = new System.Drawing.Size(408, 329);
             this.ControlBox = false;

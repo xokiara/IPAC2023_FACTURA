@@ -42,6 +42,29 @@ namespace Vista
             //limpiar
             errorProvider1.Clear();
 
+            //Validar en la base de datos
+
+            //Mostrar el Menú
+            //Instnacia del objeto
+            Menu menuFormulario = new Menu();
+            //Para que ya no se mire el login despues de mostrar el menú
+            this.Hide();
+            //Mostrar
+            menuFormulario.Show();
+        }
+
+        //Botón mostrar contraseña
+        private void MostrarContraseñaButton_Click(object sender, EventArgs e)
+        {
+            if (ContraseñaTextBox.PasswordChar == '*')
+            {
+                ContraseñaTextBox.PasswordChar = '\0';
+            }
+            else
+            {
+                ContraseñaTextBox.PasswordChar = '*';
+            }
+
         }
     }
 }
