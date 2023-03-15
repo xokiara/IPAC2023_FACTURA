@@ -7,7 +7,8 @@
         public string Descripcion { get; set; }
         public int Existencia { get; set; }
         public decimal Precio { get; set; }
-        public byte[] Imagen { get; set; }
+        public byte[] Foto { get; set; }
+        public bool EstaActivo { get; set; }
 
         //Constructor vacio
         public Producto()
@@ -15,13 +16,15 @@
         }
 
         //Constructor 
-        public Producto(string codigo, string descripcion, int existencia, decimal precio, byte[] imagen)
+        public Producto(string codigo, string descripcion, int existencia, decimal precio, byte[] foto, bool estaActivo)
         {
             Codigo = codigo;
             Descripcion = descripcion;
             Existencia = existencia;
             Precio = precio;
-            Imagen = imagen;
+            Foto = foto;
+            EstaActivo = estaActivo;
         }
+
     }
 }

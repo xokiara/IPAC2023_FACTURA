@@ -167,7 +167,6 @@
             // 
             // ModificarButton
             // 
-            this.ModificarButton.Enabled = false;
             this.ModificarButton.Location = new System.Drawing.Point(217, 277);
             this.ModificarButton.Name = "ModificarButton";
             this.ModificarButton.Size = new System.Drawing.Size(74, 26);
@@ -189,13 +188,13 @@
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Enabled = false;
             this.EliminarButton.Location = new System.Drawing.Point(377, 277);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(74, 26);
             this.EliminarButton.TabIndex = 17;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // CancelarButton
             // 
@@ -210,10 +209,12 @@
             // 
             // UsuariosDataGridView
             // 
+            this.UsuariosDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UsuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UsuariosDataGridView.Location = new System.Drawing.Point(0, 309);
             this.UsuariosDataGridView.Name = "UsuariosDataGridView";
-            this.UsuariosDataGridView.Size = new System.Drawing.Size(725, 203);
+            this.UsuariosDataGridView.Size = new System.Drawing.Size(825, 203);
             this.UsuariosDataGridView.TabIndex = 19;
             // 
             // NuevoButton
@@ -234,7 +235,7 @@
             // 
             this.AdjuntarFotoButton.Enabled = false;
             this.AdjuntarFotoButton.Image = global::Vista.Properties.Resources.buscar;
-            this.AdjuntarFotoButton.Location = new System.Drawing.Point(659, 161);
+            this.AdjuntarFotoButton.Location = new System.Drawing.Point(707, 161);
             this.AdjuntarFotoButton.Name = "AdjuntarFotoButton";
             this.AdjuntarFotoButton.Size = new System.Drawing.Size(40, 38);
             this.AdjuntarFotoButton.TabIndex = 13;
@@ -246,7 +247,7 @@
             this.FotoPictureBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FotoPictureBox.Location = new System.Drawing.Point(434, 12);
             this.FotoPictureBox.Name = "FotoPictureBox";
-            this.FotoPictureBox.Size = new System.Drawing.Size(220, 187);
+            this.FotoPictureBox.Size = new System.Drawing.Size(267, 187);
             this.FotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.FotoPictureBox.TabIndex = 12;
             this.FotoPictureBox.TabStop = false;
@@ -255,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 509);
+            this.ClientSize = new System.Drawing.Size(825, 509);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.UsuariosDataGridView);
             this.Controls.Add(this.CancelarButton);
@@ -280,6 +281,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UsuariosForm";
             this.Text = "Usuarios";
+            this.Load += new System.EventHandler(this.UsuariosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FotoPictureBox)).EndInit();
