@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Text;
 
@@ -161,6 +162,43 @@ namespace Datos
             }
             return foto;
         }
+
+        //Método devolver producto por código
+        public Producto DevolverProductoPorCodigo(string codigo)
+        {
+            Producto producto = null;
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM producto WHERE Codigo = @Codigo; ");
+
+                using (MySqlConnection _conexion = new MySqlConnection(cadena))
+                {
+                    _conexion.Open();
+                    using (MySqlCommand comando = new MySqlCommand(sql.ToString(), _conexion))
+                    {
+                        comando.CommandType = CommandType.Text;
+                        MySqlDataReader dr = comando.ExecuteReader();
+                        if (dr.Read())
+                        {
+                            producto = new Producto();
+
+                            producto.Codigo = codigo;
+                            producto.Descripcion = dr["Descripcion"].ToString();
+                            producto.Existencia = Convert.ToInt32(dr["Existencia"]);
+                            producto.Precio = Convert.ToDecimal(dr["Precio"]);
+                            producto.EstaActivo = Convert.ToBoolean(dr["EstaActivo"]);
+
+                        }
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+            }
+            return producto;
+        }
+
     }
 
 }
