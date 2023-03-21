@@ -60,6 +60,7 @@
             this.PrecioTextBox.Name = "PrecioTextBox";
             this.PrecioTextBox.Size = new System.Drawing.Size(272, 22);
             this.PrecioTextBox.TabIndex = 15;
+            this.PrecioTextBox.TextChanged += new System.EventHandler(this.PrecioTextBox_TextChanged);
             this.PrecioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecioTextBox_KeyPress);
             // 
             // label4
@@ -70,6 +71,7 @@
             this.label4.Size = new System.Drawing.Size(49, 16);
             this.label4.TabIndex = 14;
             this.label4.Text = "Precio:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // ExistenciaTextBox
             // 
@@ -78,6 +80,7 @@
             this.ExistenciaTextBox.Name = "ExistenciaTextBox";
             this.ExistenciaTextBox.Size = new System.Drawing.Size(272, 22);
             this.ExistenciaTextBox.TabIndex = 13;
+            this.ExistenciaTextBox.TextChanged += new System.EventHandler(this.ExistenciaTextBox_TextChanged);
             this.ExistenciaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ExistenciaTextBox_KeyPress);
             // 
             // label3
@@ -88,6 +91,7 @@
             this.label3.Size = new System.Drawing.Size(71, 16);
             this.label3.TabIndex = 12;
             this.label3.Text = "Existencia:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // DescripcionTextBox
             // 
@@ -96,6 +100,7 @@
             this.DescripcionTextBox.Name = "DescripcionTextBox";
             this.DescripcionTextBox.Size = new System.Drawing.Size(272, 22);
             this.DescripcionTextBox.TabIndex = 11;
+            this.DescripcionTextBox.TextChanged += new System.EventHandler(this.DescripcionTextBox_TextChanged);
             // 
             // label2
             // 
@@ -105,6 +110,7 @@
             this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 10;
             this.label2.Text = "Descripción:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // CodigoTextBox
             // 
@@ -113,6 +119,7 @@
             this.CodigoTextBox.Name = "CodigoTextBox";
             this.CodigoTextBox.Size = new System.Drawing.Size(272, 22);
             this.CodigoTextBox.TabIndex = 9;
+            this.CodigoTextBox.TextChanged += new System.EventHandler(this.CodigoTextBox_TextChanged);
             // 
             // label1
             // 
@@ -122,6 +129,7 @@
             this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Código:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AdjuntarImagenButton
             // 
@@ -203,6 +211,7 @@
             this.ProductosDataGridView.Name = "ProductosDataGridView";
             this.ProductosDataGridView.Size = new System.Drawing.Size(740, 199);
             this.ProductosDataGridView.TabIndex = 26;
+            this.ProductosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductosDataGridView_CellContentClick);
             // 
             // errorProvider1
             // 
@@ -216,6 +225,7 @@
             this.label6.Size = new System.Drawing.Size(77, 16);
             this.label6.TabIndex = 27;
             this.label6.Text = "Esta Activo:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // EstaActivoCheckBox
             // 
@@ -226,6 +236,7 @@
             this.EstaActivoCheckBox.Size = new System.Drawing.Size(15, 14);
             this.EstaActivoCheckBox.TabIndex = 28;
             this.EstaActivoCheckBox.UseVisualStyleBackColor = true;
+            this.EstaActivoCheckBox.CheckedChanged += new System.EventHandler(this.EstaActivoCheckBox_CheckedChanged);
             // 
             // ProductosForm
             // 
