@@ -55,6 +55,11 @@ namespace Vista
             {
                 if (usuario.EstaActivo)
                 {
+                    //Sseión guardarda cuando se entra a nueva factura
+                    System.Security.Principal.GenericIdentity identidad = new System.Security.Principal.GenericIdentity(usuario.CodigoUsuario);
+                    System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(identidad, new string[] { usuario.Rol });
+                    System.Threading.Thread.CurrentPrincipal = principal;
+
                     //Mostrar el Menú
                     //Instnacia del objeto
                     Menu menuFormulario = new Menu();
