@@ -44,6 +44,7 @@
             this.CancelarButton.TabIndex = 8;
             this.CancelarButton.Text = "Cancelar";
             this.CancelarButton.UseVisualStyleBackColor = true;
+            this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
             // AceptarButton
             // 
@@ -53,6 +54,7 @@
             this.AceptarButton.TabIndex = 7;
             this.AceptarButton.Text = "Aceptar";
             this.AceptarButton.UseVisualStyleBackColor = true;
+            this.AceptarButton.Click += new System.EventHandler(this.AceptarButton_Click);
             // 
             // DescripcionTextBox
             // 
@@ -60,6 +62,7 @@
             this.DescripcionTextBox.Name = "DescripcionTextBox";
             this.DescripcionTextBox.Size = new System.Drawing.Size(609, 22);
             this.DescripcionTextBox.TabIndex = 6;
+            this.DescripcionTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.DescripcionTextBox_KeyUp);
             // 
             // label1
             // 
@@ -89,7 +92,7 @@
             this.Controls.Add(this.DescripcionTextBox);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BuscarProductoForm";
             this.Text = "BuscarProductoForm";
             this.Load += new System.EventHandler(this.BuscarProductoForm_Load);
