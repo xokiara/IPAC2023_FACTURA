@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
@@ -41,6 +43,10 @@
             this.toolStripTabItem4 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.NuevaFacturaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.tabbedMDIManager1 = new Syncfusion.Windows.Forms.Tools.TabbedMDIManager(this.components);
+            this.backStageView1 = new Syncfusion.Windows.Forms.BackStageView(this.components);
+            this.backStage1 = new Syncfusion.Windows.Forms.BackStage();
+            this.backStageButton1 = new Syncfusion.Windows.Forms.BackStageButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             this.toolStripTabItem1.Panel.SuspendLayout();
@@ -51,10 +57,13 @@
             this.toolStripEx4.SuspendLayout();
             this.toolStripTabItem4.Panel.SuspendLayout();
             this.toolStripEx1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backStage1)).BeginInit();
+            this.backStage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControlAdv1
             // 
+            this.ribbonControlAdv1.BackStageView = this.backStageView1;
             this.ribbonControlAdv1.CaptionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ribbonControlAdv1.Dock = Syncfusion.Windows.Forms.Tools.DockStyleEx.Top;
             this.ribbonControlAdv1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -64,7 +73,7 @@
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem4);
             this.ribbonControlAdv1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControlAdv1.MenuButtonFont = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.ribbonControlAdv1.MenuButtonText = "";
+            this.ribbonControlAdv1.MenuButtonText = "Inicio";
             this.ribbonControlAdv1.MenuButtonWidth = 56;
             this.ribbonControlAdv1.MenuColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(198)))));
             this.ribbonControlAdv1.Name = "ribbonControlAdv1";
@@ -78,7 +87,7 @@
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem4;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(703, 146);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -237,7 +246,7 @@
             this.toolStripTabItem4.Panel.TabIndex = 5;
             this.toolStripTabItem4.Panel.Text = "Ventas";
             this.toolStripTabItem4.Position = 3;
-            this.toolStripTabItem4.Size = new System.Drawing.Size(57, 30);
+            this.toolStripTabItem4.Size = new System.Drawing.Size(47, 19);
             this.toolStripTabItem4.Tag = "4";
             this.toolStripTabItem4.Text = "Ventas";
             // 
@@ -270,12 +279,62 @@
             this.NuevaFacturaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.NuevaFacturaToolStripButton.Click += new System.EventHandler(this.NuevaFacturaToolStripButton_Click);
             // 
+            // tabbedMDIManager1
+            // 
+            this.tabbedMDIManager1.AttachedTo = this;
+            this.tabbedMDIManager1.CloseButtonBackColor = System.Drawing.Color.White;
+            this.tabbedMDIManager1.CloseButtonToolTip = "";
+            this.tabbedMDIManager1.DropDownButtonToolTip = "";
+            this.tabbedMDIManager1.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabbedMDIManager1.NeedUpdateHostedForm = false;
+            this.tabbedMDIManager1.ShowCloseButton = true;
+            this.tabbedMDIManager1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererOffice2010);
+            this.tabbedMDIManager1.ThemeName = "TabRendererOffice2010";
+            // 
+            // backStageView1
+            // 
+            this.backStageView1.BackStage = this.backStage1;
+            this.backStageView1.HostControl = null;
+            this.backStageView1.HostForm = this;
+            // 
+            // backStage1
+            // 
+            this.backStage1.AllowDrop = true;
+            this.backStage1.BeforeTouchSize = new System.Drawing.Size(717, 351);
+            this.backStage1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.backStage1.ChildItemSize = new System.Drawing.Size(80, 140);
+            this.backStage1.Controls.Add(this.backStageButton1);
+            this.backStage1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.backStage1.ItemSize = new System.Drawing.Size(138, 40);
+            this.backStage1.Location = new System.Drawing.Point(4, 53);
+            this.backStage1.MinimumSize = new System.Drawing.Size(100, 53);
+            this.backStage1.Name = "backStage1";
+            this.backStage1.OfficeColorScheme = Syncfusion.Windows.Forms.Tools.ToolStripEx.ColorScheme.Managed;
+            this.backStage1.Size = new System.Drawing.Size(717, 351);
+            this.backStage1.TabIndex = 2;
+            this.backStage1.ThemeName = "BackStage2016Renderer";
+            this.backStage1.Visible = false;
+            // 
+            // backStageButton1
+            // 
+            this.backStageButton1.Accelerator = "";
+            this.backStageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.backStageButton1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backStageButton1.Location = new System.Drawing.Point(0, 10);
+            this.backStageButton1.Name = "backStageButton1";
+            this.backStageButton1.Placement = Syncfusion.Windows.Forms.BackStageItemPlacement.Top;
+            this.backStageButton1.Size = new System.Drawing.Size(137, 33);
+            this.backStageButton1.TabIndex = 3;
+            this.backStageButton1.Text = "Salir";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 364);
+            this.Controls.Add(this.backStage1);
             this.Controls.Add(this.ribbonControlAdv1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.IsMdiContainer = true;
             this.Name = "Menu";
             this.Text = "Menu";
@@ -299,6 +358,8 @@
             this.toolStripTabItem4.Panel.PerformLayout();
             this.toolStripEx1.ResumeLayout(false);
             this.toolStripEx1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backStage1)).EndInit();
+            this.backStage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -318,5 +379,9 @@
         private System.Windows.Forms.ToolStripButton UsuariosToolStripButton1;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx4;
         private System.Windows.Forms.ToolStripButton ClientesToolStripButton1;
+        private Syncfusion.Windows.Forms.Tools.TabbedMDIManager tabbedMDIManager1;
+        private Syncfusion.Windows.Forms.BackStageView backStageView1;
+        private Syncfusion.Windows.Forms.BackStage backStage1;
+        private Syncfusion.Windows.Forms.BackStageButton backStageButton1;
     }
 }

@@ -113,6 +113,16 @@ namespace Vista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Encabezado {
+            get {
+                object obj = ResourceManager.GetObject("Encabezado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grupo {
             get {
                 object obj = ResourceManager.GetObject("grupo", resourceCulture);

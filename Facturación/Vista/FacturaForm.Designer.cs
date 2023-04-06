@@ -335,6 +335,7 @@
             // 
             // GuardarButton
             // 
+            this.GuardarButton.Image = global::Vista.Properties.Resources.Encabezado;
             this.GuardarButton.Location = new System.Drawing.Point(12, 540);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(104, 44);
@@ -351,6 +352,10 @@
             this.CancelarButton.TabIndex = 20;
             this.CancelarButton.Text = "Cancelar";
             this.CancelarButton.UseVisualStyleBackColor = true;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // printPreviewDialog1
             // 

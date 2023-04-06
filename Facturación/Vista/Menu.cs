@@ -42,5 +42,10 @@ namespace Vista
             facturaForm.MdiParent = this;
             facturaForm.Show();
         }
+
+        private void backStageButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
